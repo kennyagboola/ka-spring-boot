@@ -14,7 +14,7 @@ stages:
     steps:
       - checkout: self
 - stage: Dockerize
-    displayName: Dockerize Stage
+  displayName: Dockerize Stage
     jobs:
       - job: DockerizeJob
         displayName: Dockerize Job
