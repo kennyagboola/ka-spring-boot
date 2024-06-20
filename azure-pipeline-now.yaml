@@ -20,12 +20,12 @@ stages:
       displayName: Dockerize Job
         # pool:
         #   vmImage: 'windows-2019'
-    steps:
-      - checkout: self  #      
-      - task: Docker@2
-        displayName: Build an image
-        inputs:
-          command: build
-          dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
-          tags: |
-            $(tag)
+      steps:
+        - checkout: self  #      
+        - task: Docker@2
+          displayName: Build an image
+          inputs:
+            command: build
+            dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
+            tags: |
+              $(tag)
